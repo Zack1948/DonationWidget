@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 9, 2011 10:53:44 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.paypal.donation.models.Widgetui" table="widgetui" catalog="givingdb">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="widgetid" type="long">
+            <column name="widgetid" not-null="true" />
+        </property>
+        <property name="payerid" type="string">
+            <column name="payerid" length="50" not-null="true" />
+        </property>
+        <property name="themetype" type="java.lang.Character">
+            <column name="themetype" length="1" />
+        </property>
+        <property name="themevalue" type="string">
+            <column name="themevalue" length="10" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="50" />
+        </property>
+        <property name="titlecolor" type="string">
+            <column name="titlecolor" length="10" />
+        </property>
+        <property name="coverimageurl" type="string">
+            <column name="coverimageurl" length="250" />
+        </property>
+        <property name="goal" type="long">
+            <column name="goal" not-null="false" />
+        </property>
+        <property name="goalcurrency" type="int">
+            <column name="goalcurrency" not-null="false" />
+        </property>
+        <property name="goalprogbcolor" type="string">
+            <column name="goalprogbcolor" length="10" />
+        </property>
+        <property name="cause" type="string">
+            <column name="cause" length="1000" />
+        </property>
+        <property name="weburl" type="string">
+            <column name="weburl" length="250" />
+        </property>
+        <property name="contribamts" type="string">
+            <column name="contribamts" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

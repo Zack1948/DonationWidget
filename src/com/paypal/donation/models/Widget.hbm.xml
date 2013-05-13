@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 9, 2011 10:53:44 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.paypal.donation.models.Widget" table="widget" catalog="givingdb">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="payerid" type="string">
+            <column name="payerid" length="50" not-null="true" />
+        </property>
+        <property name="widgetexternalid" type="string">
+            <column name="widgetexternalid" length="50" not-null="true" />
+        </property>
+        <!-- 
+        <property name="createdDt" type="timestamp">
+            <column name="created_dt" length="0" not-null="true" />
+        </property>
+         -->
+        <property name="updatedDt" type="timestamp">
+            <column name="updated_dt" length="0" not-null="false" />
+        </property>
+        <property name="status" type="char">
+            <column name="status" length="1" />
+        </property>
+        <property name="ein" type="string">
+            <column name="ein" length="50" />
+        </property>
+        <property name="einVerified" type="char">
+            <column name="einVerified" length="1" />
+        </property>
+        <property name="orgName" type="string">
+            <column name="org_name" length="260" />
+        </property>
+        <property name="vettingRequestId" type="string">
+            <column name="vettingRequestId" length="32" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 9, 2011 10:53:44 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.paypal.donation.models.Transaction" table="transaction" catalog="givingdb">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="widgetexternalid" type="string">
+            <column name="widgetexternalid" not-null="true" length="50"/>
+        </property>
+        <property name="payerid" type="string">
+            <column name="payerid" length="50" />
+        </property>
+        <property name="emailid" type="string">
+            <column name="emailid" length="100" />
+        </property>
+        <property name="paypaltransid" type="string">
+            <column name="paypaltransid" length="100" />
+        </property>
+        <property name="transresponse" type="string">
+            <column name="transresponse" length="65535" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="50" />
+        </property>
+        <property name="transactiontype" type="string">
+            <column name="transactiontype" length="50" />
+        </property>
+        <property name="amount" type="java.lang.Double">
+            <column name="amount" precision="22" scale="0" />
+        </property>
+        <property name="createdDt" type="timestamp">
+            <column name="created_dt" length="0" not-null="true" />
+        </property>
+        <property name="updatedDt" type="timestamp">
+            <column name="updated_dt" length="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

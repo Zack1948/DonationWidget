@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 9, 2011 10:53:44 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.paypal.donation.models.User" table="user" catalog="givingdb">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="payerId" type="string" update="false">
+            <column name="payerid" length="50" not-null="true" />
+        </property>
+        <property name="emailId" type="string">
+            <column name="emailid" length="100" not-null="true" />
+        </property>
+        <property name="createdDt" type="timestamp" update="false">
+            <column name="created_dt" length="0" not-null="true"/>
+        </property>
+        <property name="updatedDt" type="timestamp">
+            <column name="updated_dt" length="0" not-null="true"/>
+        </property>
+        <property name="firstName" type="string">
+            <column name="firstname" length="100" not-null="true"/>
+        </property>
+        <property name="lastName" type="string">
+            <column name="lastname" length="100" not-null="true"/>
+        </property>
+        <property name="correlationId" type="string">
+            <column name="correlationid" length="100" not-null="true" />
+        </property>
+        <property name="version" type="string">
+            <column name="version" length="20" not-null="true" />            
+        </property>        
+        <property name="build" type="string">
+            <column name="build" length="100" not-null="true" />
+        </property>
+        <property name="grantedPermission" type="java.lang.Character">
+            <column name="granted_permission" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>
